@@ -1,0 +1,37 @@
+@mixin container($width) {
+  width: $width;
+  margin: auto;
+}
+
+@mixin flex() {
+  display: flex;
+  flex-direction: row;
+  -ms-flex-direction: row;
+
+}
+@mixin flex-center() {
+  justify-content: center;
+  align-items: center;
+}
+@mixin vertical-center() {
+  @include flex;
+  align-items: center;
+}
+
+@mixin border-radius($rad) {
+  border-radius: $rad;
+  -moz-border-radius: $rad;
+  -webkit-border-radius: $rad;
+}
+
+@mixin in
+
+@mixin circleShape($width) {
+  width: $width;
+  height: $width;
+  @include border-radius(50%);
+}
+@mixin squareShape($size) {
+  width: $size;
+  height: $size;
+}

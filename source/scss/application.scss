@@ -1,0 +1,8 @@
+@import "base";
+
+#content {
+	background-color: grey;
+	@include container(80vw);
+}
+
+@import "howitworks";

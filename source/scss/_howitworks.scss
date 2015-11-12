@@ -1,0 +1,33 @@
+@import "base";
+
+$circle-border: 0080ff;
+$circle-size: percentage(22/25);
+$inner-circle-size: percentage(21.5/25);
+#how-it-works {
+  @include flex();
+  height: 20vw;
+  .element {
+    margin: auto;
+    width: 25% !important;
+    height: 100%;
+    @include vertical-center;
+  }
+}
+
+.circle {
+  @include circleShape($circle-size);
+  background-color: aqua;
+  margin: auto;
+  @include vertical-center;
+  .inner {
+    background-color: white;
+    margin: auto;
+    @include circleShape($inner-circle-size);
+    @include vertical-center;
+    box-shadow: #555500;
+  }
+}
+.circle:hover {
+  @include circleShape(95%);
+  background-color: aquamarine;
+}
