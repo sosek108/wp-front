@@ -39,29 +39,80 @@
 //Counters
 #counters {
   @include spread;
-  margin-top: 0px;
   height: 139px;
   background: url('../images/smooth_wall2.png') repeat-x;
   box-shadow: inset 0px 0px 27px 0px rgba(4, 5, 5, 0.07);
+  padding-top: 10px;
 }
+.counters-inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-left: 458px;
+  width: 1119-458px;
 
-#bubble {
+}
+.bubble {
   background: url('../images/bubble.png') no-repeat;
   width: 107px;
-  height: 78px;
-  margin-left: 458px;
-  margin-top: 10px;
+  height: 60px;
   padding-top: 18px;
   padding-left: 20px;
+  padding-bottom: -18px;
   font-family: 'Oswald';
   font-size: 17px;
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1.2em;
   color: #434343;
+  margin: auto;
   strong {
     font-size: 24px;
     font-weight: inherit;
   }
 }
+.counter {
+  background-image: url('../images/counter.png');
+  width: 88px;
+  height: 79px;
+  margin: auto;
+  font-family: "Oswald";
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 48px;
+  text-align: center;
+  position: relative;
+  &:before {
+    border-bottom: solid 2px black;
+    display: block;
+    content: '';
+    width: 64px;
+    position: absolute;
+    left: 12px;
+    top: 34px;
+  }
+  &:after {
+    text-transform: uppercase;
+    font-size: 14px;
+    position: absolute;
+    top: 79px;
+    left: 24px;
+    text-shadow: 1px 1px 1px rgba(76, 76, 76, 0.95);
+    @include font-gradient(top, white, black);
+  }
+}
+#hours:after {
+  content: 'godzin';
+  
+}
+#minutes:after {
+  content: 'minut';
 
+}
+#seconds:after {
+  content: 'sekund';
+
+}
+#media-mock {
+  margin: auto;
+}

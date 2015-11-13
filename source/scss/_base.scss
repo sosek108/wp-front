@@ -6,11 +6,8 @@
   width:100%;
 }
 
-@mixin flex() {
-  display: flex;
-}
 @mixin vertical-center() {
-  @include flex;
+  display: flex;
   align-items: center;
 }
 @mixin border-radius($rad) {
@@ -27,4 +24,15 @@
 @mixin squareShape($size) {
   width: $size;
   height: $size;
+}
+
+@mixin font-gradient($direction, $from, $to) {
+  background: linear-gradient($direction, $from, $to);
+  background: -o-linear-gradient($direction, $from, $to);
+  background: -webkit-linear-gradient($direction, $from, $to);
+  background: -moz-linear-gradient($direction, $from, $to);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
 }

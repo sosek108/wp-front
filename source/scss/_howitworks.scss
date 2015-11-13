@@ -4,7 +4,7 @@ $circle-border: 0080ff;
 $circle-size: percentage(22/25);
 $inner-circle-size: percentage(21.5/25);
 #how-it-works {
-  @include flex();
+  display: flex;
   height: 20vw;
   .element {
     margin: auto;
