@@ -1,8 +1,19 @@
 @import "base";
+@import "fonts";
 
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  @include container(1119px);
+  padding-left: 74px;
+  padding-right: 66px;
+}
 #content {
-	background-color: grey;
-	@include container(80vw);
+  background-color: grey;
+
 }
 
+@import "header";
 @import "howitworks";

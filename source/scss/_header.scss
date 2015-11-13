@@ -1,0 +1,67 @@
+@import "base";
+//Jumbo
+#jumbo {
+  @include spread;
+  background: url('../images/jumbo_bg.png');
+  height: 572px;
+  padding-top: 20px;
+  #iphone {
+    float: left;
+  }
+  #right {
+    padding-top: 30px;
+
+    #text-big {
+      padding-top: 67px;
+      font-size: 80px;
+      font-family: "Oswald";
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.125;
+      text-align: left;
+      text-shadow: 1px 1px 3px rgba(76, 76, 76, 0.95);
+      span {
+        color: fcce00;
+      }
+    }
+
+    #text-small {
+      padding-top: 50px;
+      color: white;
+      font-family: "Open Sans";
+      font-size: 29px;
+      font-weight: 100;
+      text-shadow: 1px 1px 1px rgba(76, 76, 76, 0.95);
+    }
+  }
+}
+//Counters
+#counters {
+  @include spread;
+  margin-top: 0px;
+  height: 139px;
+  background: url('../images/smooth_wall2.png') repeat-x;
+  box-shadow: inset 0px 0px 27px 0px rgba(4, 5, 5, 0.07);
+}
+
+#bubble {
+  background: url('../images/bubble.png') no-repeat;
+  width: 107px;
+  height: 78px;
+  margin-left: 458px;
+  margin-top: 10px;
+  padding-top: 18px;
+  padding-left: 20px;
+  font-family: 'Oswald';
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 1.2em;
+  color: #434343;
+  strong {
+    font-size: 24px;
+    font-weight: inherit;
+  }
+}
+
