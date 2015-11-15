@@ -6,14 +6,10 @@ body {
   padding: 0;
 }
 .container {
-  @include container(1119px);
   padding-left: 74px;
   padding-right: 66px;
 }
-#content {
-  background-color: grey;
-
-}
-
 @import "header";
 @import "howitworks";
+@import "slider";
+@import "footer";

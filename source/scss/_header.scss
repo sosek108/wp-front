@@ -1,4 +1,5 @@
 @import "base";
+
 //Jumbo
 #jumbo {
   @include spread;
@@ -39,19 +40,20 @@
 //Counters
 #counters {
   @include spread;
-  height: 139px;
+  height: 127px;
   background: url('../images/smooth_wall2.png') repeat-x;
   box-shadow: inset 0px 0px 27px 0px rgba(4, 5, 5, 0.07);
   padding-top: 10px;
-}
-.counters-inner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  margin-left: 458px;
-  width: 1119-458px;
+  .inner {
+    @include flex(row);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 458px;
+    width: 1119-458px;
 
+  }
 }
+
 .bubble {
   background: url('../images/bubble.png') no-repeat;
   width: 107px;

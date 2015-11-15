@@ -1,0 +1,69 @@
+@import "base";
+footer {
+  background-color: #2d2d2d;
+  @include spread;
+  #return-up {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAALElEQVQIW2NkgABJKA2inoMIRmyC6BJglTATYDpQBGE6kBQi7ALpgGtHdgAAon8FUg6hUUAAAAAASUVORK5CYII=");
+    background-repeat: repeat;
+    background-color: white;
+    .intern {
+      font-size: 14px;
+      font-family: 'Open sans';
+      font-weight: 400;
+      font-style: italic;
+      color: #3e3e3e;
+      padding-top: 0.7em;
+      padding-bottom: 0.7em;
+      @include container(981px);
+      text-align: right;
+      &:after {
+        content: '';
+        display: inline-block;
+        background-image: url('../images/arrow.png');
+        background-position: center ;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 10px;
+
+      }
+    }
+  }
+  #info {
+    @include container(981px);
+    color: #d9d9d9;
+    font-family: 'Open Sans';
+    font-weight: 100;
+    font-size: 14px;
+    h1 {
+      font-size: 30px;
+      font-style: italic;
+      font-weight: inherit;
+    }
+    #twitter {
+      width: 330px;
+    }
+    #about-us {
+      width: 600px;
+      text-align: right;
+      p {
+        margin-bottom: 1.5em;
+      }
+    }
+  }
+  #credits {
+    clear: both;
+    background-color: white;
+    .inner {
+      @include container(981);
+
+    }
+  }
+  .left {
+    float:left;
+    display: inline-block;
+  }
+  .right {
+    float: right;
+    display: inline-block;
+  }
+}

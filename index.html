@@ -2,7 +2,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Photo iPhone</title>
         <link rel="stylesheet" href="css/application.css"/>
+
     </head>
     <body>
         <header>
@@ -24,7 +26,7 @@
             </div>
             <div id="counters" class="spread">
                 <div class="container">
-                    <div class="counters-inner">
+                    <div class="inner">
                         <div class="bubble">
                             zostało <br>
                             <strong>tylko</strong>
@@ -39,13 +41,66 @@
         </header>
         <div id="content" class="container">
             <div id="how-it-works">
-                <div class="element"><div class="circle"><div class="inner">asdf</div></div></div>
-                <div class="element"><div class="circle">asdf1</div></div>
-                <div class="element"><div class="circle">asdf2</div></div>
-                <div class="element"><div class="circle">asdf3</div></div>
+                <h1>Jak to działa?</h1>
+                <div id="circles">
+                    <div class="circle" id="face">
+                        <object data="images/icons/face.svg" type="image/svg+xml"></object>
+                        <h1>załóż konto</h1>
+                        Zajmie Ci to <br/> dwie minuty
+                    </div> <div class="arrow"><object data="images/icons/arrow.svg" type="image/svg+xml"></object></div>
+                    <div class="circle" id="phone">
+                        <object data="images/icons/phone.svg" type="image/svg+xml"></object>
+                        <h1>rób zdjęcia</h1>
+                        Jednym <br/> kliknięciem
+                    </div> <div class="arrow"><object data="images/icons/arrow.svg" type="image/svg+xml"></object></div>
+                    <div class="circle" id="connect">
+                        <object data="images/icons/connection.svg" type="image/svg+xml"></object>
+                        <h1>dodaj filtry</h1>
+                        Bardzo duży <br/> wybór
+                    </div> <div class="arrow"><object data="images/icons/arrow.svg" type="image/svg+xml"></object></div>
+                    <div class="circle" id="award">
+                        <object data="images/icons/award.svg" type="image/svg+xml"></object>
+                        <h1>gotowe!</h1>
+                        <span>Publikuj, oglądaj</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="slider">
+                <img src="images/slider/slider.png" alt=""/>
+                <img src="images/slider/slider2.png" alt=""/>
             </div>
         </div>
-        <footer></footer>
+        <footer>
+            <div id="return-up"><div class="intern">Wróć do góry</div></div>
+            <div id="info">
+                <div class="inner">
+                    <div id="twitter" class="left">
+                        <h1>Twitter</h1>
+                        <p>Mock Twittera</p>
+                    </div>
+                    <div id="about-us" class="right">
+                        <h1>O nas</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est nemo, nulla obcaecati repellat sequi!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est nemo, nulla obcaecati repellat sequi!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque est nemo, nulla obcaecati repellat sequi!
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="credits">
+                <div class="inner">
+                    <div class="left">Copyright © 2013 • Grupa o2</div>
+                    <div class="right">Wszelkie prawa zastrzeżone</div>
+                </div>
+            </div>
+        </footer>
         <script src="js/counter.js"></script>
+        <script src="js/slider.js"></script>
     </body>
 </html>

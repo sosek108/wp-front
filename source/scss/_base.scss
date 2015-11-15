@@ -5,10 +5,20 @@
 @mixin spread() {
   width:100%;
 }
-
-@mixin vertical-center() {
+@mixin flex($direction) {
   display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: $direction;
+  flex-direction: $direction;
+}
+@mixin vertical-center() {
+  @include flex;
   align-items: center;
+}
+@mixin content-center() {
+  @include vertical-center;
+  text-align: center;
 }
 @mixin border-radius($rad) {
   border-radius: $rad;
@@ -35,4 +45,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
+}
+
+@mixin transition($type, $style, $delay) {
+  -moz-transition: $type $style $delay;
+  -webkit-transition: $type $style $delay;
+  -o-transition: $type $style $delay;
+  transition: $type $style $delay;
 }

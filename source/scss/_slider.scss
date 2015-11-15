@@ -1,0 +1,56 @@
+@import "base";
+#slider {
+  @include container(981px);
+  height: 486px;
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+  #left {
+    height: 66px;
+    width: 64px;
+    content: '';
+    display: block;
+    background: url('../images/slider/left.png') no-repeat;
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  #right {
+    height: 66px;
+    width: 64px;
+    content: '';
+    display: block;
+    background: url('../images/slider/right.png') no-repeat;
+    position: absolute;
+    top: 200px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  #pagination {
+    position: relative;
+    top: 468px;
+    margin:auto;
+    width: 100px;
+    div {
+      width: 18px;
+      height: 18px;
+      background: url('../images/slider/dot.png') center no-repeat;
+      cursor: pointer;
+      display: inline-block;
+      &.active {
+        background-image: url('../images/slider/handle.png') !important;
+      }
+    }
+  }
+
+  img {
+    display: inline-block !important;
+    float: left;
+    position: absolute;
+    transition: all ease 0.5s;
+  }
+}

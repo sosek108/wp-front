@@ -1,33 +1,63 @@
 @import "base";
+@import "shapes";
 
-$circle-border: 0080ff;
-$circle-size: percentage(22/25);
-$inner-circle-size: percentage(21.5/25);
 #how-it-works {
-  display: flex;
-  height: 20vw;
-  .element {
-    margin: auto;
-    width: 25% !important;
-    height: 100%;
-    @include vertical-center;
+  @include container(981px);
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "Oswald";
+    font-weight: 100;
+    font-size: 52px;
+    margin: 0;
   }
-}
-
-.circle {
-  @include circleShape($circle-size);
-  background-color: aqua;
-  margin: auto;
-  @include vertical-center;
-  .inner {
-    background-color: white;
-    margin: auto;
-    @include circleShape($inner-circle-size);
-    @include vertical-center;
-    box-shadow: #555500;
+  padding-top: 130px;
+  padding-bottom: 130px;
+  #circles {
+    @include flex(row);
+    height: 265px;
+    .circle {
+      margin: auto;
+      border: solid 14px #53b8ee;
+      width: 189px;
+      height: 139px;
+      @include border-radius(50%);
+      @include flex(column);
+      text-align: center;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      box-shadow: inset 5px 5px 10px rgba(119,119,119,0.8);
+      font-size: 15px;
+      font-family: "Open Sans";
+      padding-top: 25px;
+      @include transition(all, ease, 1s);
+      h1 {
+        font-size: 24px;
+        @include transition(all, ease, 1s);
+      }
+      &:hover {
+        border-color: #fcce00;
+        background-color: rgba(252,206,0,0.4);
+        padding-top: 52px;
+        width: 247px;
+        height: 165px;
+        margin-left: 0;
+        margin-right: 0;
+        z-index: 2;
+        h1 {
+          font-size: 28px;
+        }
+        &+.arrow {
+//          left: -14px;
+        }
+      }
+    }
+    .arrow {
+      position: relative;
+      top: 118px;
+      left: 0;
+      z-index: -1;
+      @include transition(all, ease, 1s);
+    }
   }
-}
-.circle:hover {
-  @include circleShape(95%);
-  background-color: aquamarine;
 }
